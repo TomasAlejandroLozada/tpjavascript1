@@ -1,0 +1,12 @@
+let cadenas = [];
+let cadena;
+
+while (true) {
+    cadena = prompt("Ingresa una cadena de texto (o cancela para terminar):");
+    if (cadena === null) { 
+        break;
+    }
+    cadenas.push(cadena);
+}
+
+document.write("Cadenas concatenadas: " + cadenas.join(" - "));
