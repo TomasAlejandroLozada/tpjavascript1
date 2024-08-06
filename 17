@@ -1,0 +1,13 @@
+let num = parseInt(prompt("Ingresa un número:"));
+
+function esPrimo(n) {
+    if (n <= 1) return false;
+    if (n === 2) return true; // El 2 es el único número par primo
+    if (n % 2 === 0) return false; // Los números pares mayores que 2 no son primos
+    for (let i = 3; i <= Math.sqrt(n); i += 2) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+document.write(num + (esPrimo(num) ? " es un número primo." : " no es un número primo."));
