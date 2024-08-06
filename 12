@@ -1,0 +1,13 @@
+let frase = prompt("Ingresa una frase:").toLowerCase();
+let vocales = 'aeiou';
+let conteo = {};
+
+for (let vocal of vocales) {
+    let regex = new RegExp(vocal, 'g');
+    conteo[vocal] = (frase.match(regex) || []).length;
+}
+
+document.write("Conteo de vocales:<br>");
+for (let vocal in conteo) {
+    document.write(`La letra '${vocal}' aparece ${conteo[vocal]} veces.<br>`);
+}
