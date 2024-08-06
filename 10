@@ -1,0 +1,3 @@
+let frase = prompt("Ingresa una frase:");
+let vocales = frase.match(/[aeiouáéíóúüAEIOUÁÉÍÓÚÜ]/g) || [];
+document.write("Las vocales que aparecen son: " + vocales.join(", "));
