@@ -1,0 +1,24 @@
+let num1 = parseInt(prompt("Ingresa el primer número:"));
+let num2 = parseInt(prompt("Ingresa el segundo número:"));
+let divisoresComunes = [];
+
+function obtenerDivisores(num) {
+    let divisores = [];
+    for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+            divisores.push(i);
+        }
+    }
+    return divisores;
+}
+
+let divisoresNum1 = obtenerDivisores(num1);
+let divisoresNum2 = obtenerDivisores(num2);
+
+for (let divisor of divisoresNum1) {
+    if (divisoresNum2.includes(divisor)) {
+        divisoresComunes.push(divisor);
+    }
+}
+
+document.write("Los divisores comunes de " + num1 + " y " + num2 + " son: " + divisoresComunes.join(", "));
