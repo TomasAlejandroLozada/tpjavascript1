@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirámide Inversa Numérica</title>
+</head>
+<body>
+    <h1>Pirámide Inversa Numérica</h1>
+    <script>
+        let num = parseInt(prompt("Introduce un número:", "6"));
+        let resultado = "";
+
+        if (isNaN(num) || num <= 0) {
+            document.write("Por favor, introduce un número positivo válido.");
+        } else {
+            for (let i = num; i >= 1; i--) {
+                resultado += i.toString().repeat(i) + "<br>";
+            }
+            document.write(resultado);
+        }
+    </script>
+</body>
+</html>
