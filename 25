@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números del 1 al 500</title>
+    <style>
+        .linea-horizontal {
+            border-top: 1px solid black;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Números del 1 al 500</h1>
+    <script>
+        let resultado = "";
+        const limite = 500;
+
+        for (let i = 1; i <= limite; i++) {
+            let texto = i;
+            
+            if (i % 4 === 0 && i % 9 === 0) {
+                texto += " (Múltiplo de 4 y 9)";
+            } else if (i % 4 === 0) {
+                texto += " (Múltiplo de 4)";
+            } else if (i % 9 === 0) {
+                texto += " (Múltiplo de 9)";
+            }
+
+            resultado += texto + "<br>";
+
+            // Añadir una línea horizontal cada 5 números
+            if (i % 5 === 0) {
+                resultado += '<div class="linea-horizontal"></div>';
+            }
+        }
+
+        document.write(resultado);
+    </script>
+</body>
+</html>
